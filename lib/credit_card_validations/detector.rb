@@ -29,7 +29,6 @@ module CreditCardValidations
       selected_brands = keys.blank? ? self.brands : resolve_keys(*keys)
       if selected_brands.any?
         selected_brands.each do |key, brand|
-          p " ======= A KEY EH #{key} E A BRAND EH #{brand} ======="
           return key if matches_brand?(brand)
         end
       end
